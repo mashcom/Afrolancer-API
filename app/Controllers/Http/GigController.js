@@ -10,7 +10,7 @@
  */
 
 const Gig = use("App/Models/Gig");
-const Category = use("App/Models/Category");
+
 class GigController {
   /**
    * Show a list of all gigs.
@@ -21,7 +21,7 @@ class GigController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index({ request, response, view }) {
+  async index({request, response, view}) {
     return await Gig.query()
       .with('gig_categories.categories')
       .with('packages')
@@ -39,7 +39,7 @@ class GigController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async create({ request, response, view }) {
+  async create({request, response, view}) {
   }
 
   /**
@@ -50,7 +50,7 @@ class GigController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async store({ request, response }) {
+  async store({request, response}) {
   }
 
   /**
@@ -62,7 +62,7 @@ class GigController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show({ params, request, response, view }) {
+  async show({params, request, response, view}) {
     const gig = await Gig.query()
       .where('id', params.id)
       .with('gig_categories.categories')
@@ -71,10 +71,6 @@ class GigController {
       .with('user')
       .first();
 
-    //gig.category = await gig.categories().fetch();
-    //const category = await Category.find(gig.category[0].category_id);
-    /*(const category = await Category.find(gig.category[0].id);
-    gig.category.push(category);*/
     return await gig;
   }
 
@@ -87,7 +83,7 @@ class GigController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async edit({ params, request, response, view }) {
+  async edit({params, request, response, view}) {
   }
 
   /**
@@ -98,7 +94,7 @@ class GigController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update({ params, request, response }) {
+  async update({params, request, response}) {
   }
 
   /**
@@ -109,7 +105,7 @@ class GigController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy({ params, request, response }) {
+  async destroy({params, request, response}) {
   }
 }
 
