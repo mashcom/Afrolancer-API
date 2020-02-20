@@ -5,15 +5,15 @@
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 
 /**
- * Resourceful controller for interacting with gigcategories
+ * Resourceful controller for interacting with gigpackages
  */
 
-const GigCategory = use('App/Models/GigCategory')
+const GigPackage = use("App/Models/GigPackage")
 
-class GigCategoryController {
+class GigPackageController {
   /**
-   * Show a list of all gigcategories.
-   * GET gigcategories
+   * Show a list of all gigpackages.
+   * GET gigpackages
    *
    * @param {object} ctx
    * @param {Request} ctx.request
@@ -24,8 +24,8 @@ class GigCategoryController {
   }
 
   /**
-   * Render a form to be used for creating a new gigcategory.
-   * GET gigcategories/create
+   * Render a form to be used for creating a new gigpackage.
+   * GET gigpackages/create
    *
    * @param {object} ctx
    * @param {Request} ctx.request
@@ -36,23 +36,27 @@ class GigCategoryController {
   }
 
   /**
-   * Create/save a new gigcategory.
-   * POST gigcategories
+   * Create/save a new gigpackage.
+   * POST gigpackages
    *
    * @param {object} ctx
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
   async store({request, response}) {
-    const gig_category = new GigCategory();
-    gig_category.gig_id = request.post().gig_id;
-    gig_category.category_id = request.post().category_id;
-    return gig_category.save();
+    const gig_package = new GigPackage();
+    gig_package.gig_id = request.post().gig_id;
+    gig_package.name = request.post().name;
+    gig_package.description = request.post().description;
+    gig_package.price = request.post().price;
+    gig_package.duration = request.post().duration;
+    return gig_package.save();
+
   }
 
   /**
-   * Display a single gigcategory.
-   * GET gigcategories/:id
+   * Display a single gigpackage.
+   * GET gigpackages/:id
    *
    * @param {object} ctx
    * @param {Request} ctx.request
@@ -60,12 +64,11 @@ class GigCategoryController {
    * @param {View} ctx.view
    */
   async show({params, request, response, view}) {
-    return await GigCategory.find(params.id);
   }
 
   /**
-   * Render a form to update an existing gigcategory.
-   * GET gigcategories/:id/edit
+   * Render a form to update an existing gigpackage.
+   * GET gigpackages/:id/edit
    *
    * @param {object} ctx
    * @param {Request} ctx.request
@@ -76,8 +79,8 @@ class GigCategoryController {
   }
 
   /**
-   * Update gigcategory details.
-   * PUT or PATCH gigcategories/:id
+   * Update gigpackage details.
+   * PUT or PATCH gigpackages/:id
    *
    * @param {object} ctx
    * @param {Request} ctx.request
@@ -87,18 +90,15 @@ class GigCategoryController {
   }
 
   /**
-   * Delete a gigcategory with id.
-   * DELETE gigcategories/:id
+   * Delete a gigpackage with id.
+   * DELETE gigpackages/:id
    *
    * @param {object} ctx
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
   async destroy({params, request, response}) {
-    const {id} = params
-    const gig_category = await GigCategory.find(id);
-    return gig_category.delete();
   }
 }
 
-module.exports = GigCategoryController
+module.exports = GigPackageController

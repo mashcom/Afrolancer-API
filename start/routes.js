@@ -17,7 +17,9 @@
 const Route = use('Route')
 
 Route.group(() => {
-    Route.resource('gig', 'GigController');
-    Route.resource('category', 'CategoryController');
+  Route.resource('gig', 'GigController');
+  Route.resource('category', 'CategoryController');
+  Route.resource('gig_category', 'GigCategoryController');
+  Route.resource('gig_package', 'GigPackageController');
 }).prefix('api/v1')
 

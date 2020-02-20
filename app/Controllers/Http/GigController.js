@@ -40,6 +40,7 @@ class GigController {
    * @param {View} ctx.view
    */
   async create({request, response, view}) {
+
   }
 
   /**
@@ -51,6 +52,12 @@ class GigController {
    * @param {Response} ctx.response
    */
   async store({request, response}) {
+    const gig = new Gig();
+    gig.title = request.post().title;
+    gig.description = request.post().description;
+    gig.user_id = 1;
+    gig.status = 1;
+    return gig.save();
   }
 
   /**
