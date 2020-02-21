@@ -15,11 +15,15 @@
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
+Route.group(() => {
+  Route.post('/register', 'AuthController.register');
+  Route.post('/login', 'AuthController.login');
+}).prefix('api/v1');
 
 Route.group(() => {
   Route.resource('gig', 'GigController');
   Route.resource('category', 'CategoryController');
   Route.resource('gig_category', 'GigCategoryController');
   Route.resource('gig_package', 'GigPackageController');
-}).prefix('api/v1')
+}).prefix('api/v1').middleware('auth');
 

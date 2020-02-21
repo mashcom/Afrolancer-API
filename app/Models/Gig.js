@@ -20,6 +20,13 @@ class Gig extends Model {
     user() {
         return this.hasOne('App/Models/User', 'user_id', 'id');
     }
+
+    ratings() {
+        return this.hasMany('App/Models/GigRating', 'id', 'gig_id');
+    }
+    requirements() {
+        return this.hasMany('App/Models/GigRequirement', 'id', 'gig_id');
+    }
 }
 
 module.exports = Gig

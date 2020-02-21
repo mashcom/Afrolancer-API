@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7061330a-781f-4d0e-aefa-e9882c00a07a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/GigCategoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/GigCategoryController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/GigController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/GigController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start/kernel.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/kernel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/start/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582186623157</updated>
-      <workItem from="1582186634092" duration="4540000" />
+      <workItem from="1582186634092" duration="8053000" />
     </task>
     <servers />
   </component>
