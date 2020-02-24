@@ -23,7 +23,7 @@ class GigController {
    */
   async index({ request, response, view }) {
     return await Gig.query()
-      .with('gig_categories.categories')
+      .with('categories.category')
       .with('packages')
       .with('images')
       .with('user')
@@ -73,7 +73,7 @@ class GigController {
   async show({ params, request, response, view }) {
     const gig = await Gig.query()
       .where('id', params.id)
-      .with('gig_categories.categories')
+      .with('categories.category')
       .with('packages')
       .with('images')
       .with('user')
@@ -110,6 +110,10 @@ class GigController {
    * @param {Response} ctx.response
    */
   async update({ params, request, response }) {
+    const gig = new Gig.findOrFail(params.id);
+    gig.title = request.post().title;
+    gig.description = request.post().description;
+    return gig.save();
   }
 
   /**

@@ -5,7 +5,7 @@ const Model = use('Model')
 
 class Gig extends Model {
 
-    gig_categories() {
+    categories() {
         return this.hasMany('App/Models/GigCategory')
     }
 
