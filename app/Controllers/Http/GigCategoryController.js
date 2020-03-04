@@ -11,6 +11,7 @@
 const GigCategory = use('App/Models/GigCategory')
 
 class GigCategoryController {
+
   /**
    * Show a list of all gigcategories.
    * GET gigcategories
@@ -20,7 +21,7 @@ class GigCategoryController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index({request, response, view}) {
+  async index({ request, response, view }) {
   }
 
   /**
@@ -32,7 +33,7 @@ class GigCategoryController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async create({request, response, view}) {
+  async create({ request, response, view }) {
   }
 
   /**
@@ -43,11 +44,14 @@ class GigCategoryController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async store({request, response}) {
+  async store({ request, response }) {
     const gig_category = new GigCategory();
     gig_category.gig_id = request.post().gig_id;
     gig_category.category_id = request.post().category_id;
-    return gig_category.save();
+    if (gig_category.save()) {
+      return { success: true, data: gig_category }
+    }
+    return { success: false }
   }
 
   /**
@@ -59,7 +63,7 @@ class GigCategoryController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show({params, request, response, view}) {
+  async show({ params, request, response, view }) {
     return await GigCategory.find(params.id);
   }
 
@@ -72,7 +76,7 @@ class GigCategoryController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async edit({params, request, response, view}) {
+  async edit({ params, request, response, view }) {
   }
 
   /**
@@ -83,7 +87,7 @@ class GigCategoryController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update({params, request, response}) {
+  async update({ params, request, response }) {
   }
 
   /**
@@ -94,8 +98,8 @@ class GigCategoryController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy({params, request, response}) {
-    const {id} = params
+  async destroy({ params, request, response }) {
+    const { id } = params
     const gig_category = await GigCategory.find(id);
     return gig_category.delete();
   }

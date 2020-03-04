@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7061330a-781f-4d0e-aefa-e9882c00a07a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Exceptions/Handler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/functional/account_user.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/AuthController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/GigCategoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/GigCategoryController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/GigController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/GigController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/GigRequirementController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/GigRequirementController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/GigRequirement.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/GigRequirement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start/kernel.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/kernel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +23,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,6 +64,13 @@
       <updated>1582186623157</updated>
       <workItem from="1582186634092" duration="8053000" />
       <workItem from="1582316867547" duration="1237000" />
+      <workItem from="1582654853424" duration="6658000" />
+      <workItem from="1582765682400" duration="1380000" />
+      <workItem from="1582816397374" duration="590000" />
+      <workItem from="1582868809831" duration="1811000" />
+      <workItem from="1582953647950" duration="3262000" />
+      <workItem from="1583021004478" duration="6651000" />
+      <workItem from="1583128513889" duration="4493000" />
     </task>
     <servers />
   </component>
@@ -52,9 +78,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="465" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1582316936012">
+    <state x="223" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582783454118">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="465" y="243" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582316936012" />
+    <state x="223" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1582783454118" />
+    <state x="506" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583033044464">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="506" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1583033044464" />
+    <state x="465" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1583128522305">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="465" y="243" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1583128522305" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1583029817122">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1583029817122" />
   </component>
 </project>
